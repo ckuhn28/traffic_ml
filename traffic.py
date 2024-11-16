@@ -92,7 +92,6 @@ if uploaded_file is None: # and alpha is not None:
     st.metric(label = "Predicted Traffic Volume", value = f"{pred_value:.0f}")
     st.write(f"Using a **{(1-alpha_val)*100}% Prediction Interval**: [{lower_limit:.0f}, {upper_limit:.0f}]")
 elif uploaded_file is not None: # and alpha is not None:
-    st.success('CSV file successfully uploaded.', icon=':material/verified:')
     input_df = pd.read_csv(uploaded_file)
     alpha = st.slider("Select the confidence level:", min_value=0.01, max_value=0.5, value=0.1, step=0.01, help="Select the confidence level for the prediction intervals")
     alpha_val = alpha
