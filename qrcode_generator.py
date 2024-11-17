@@ -16,4 +16,4 @@ qr.make(fit=True)
 
 # Generate the QR code image
 img = qr.make_image(fill="black", back_color="white")
-img.save("qrcode.png")
+img.save("ctkuhn_traffic_ml_qrcode.png")
